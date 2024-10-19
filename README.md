@@ -25,7 +25,7 @@ This is a Spring Boot project for managing Categories and Products, implementing
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/springboot-category-product-crud.git
+   git clone https://github.com/swastiksoni1/NimapTest.git
    ```
 
 2. **Navigate to the project directory**:

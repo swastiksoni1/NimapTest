@@ -1,5 +1,6 @@
 package com.nimap.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ public class Product {
     private double price;
 
     @ManyToOne
+   // @JsonIgnore
     @JoinColumn(name = "category_id")
     private Category category;
 

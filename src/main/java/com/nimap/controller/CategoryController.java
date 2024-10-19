@@ -17,9 +17,9 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping
-    public ResponseEntity<Page<Category>> getAllCategories(@RequestParam(defaultValue = "0") int page) {
-        Pageable pageable = PageRequest.of(page, 10); // pagination
-        Page<Category> categories = categoryService.getAllCategories(pageable);
+    public ResponseEntity<Page<Category>> getAllCategories(@RequestParam(defaultValue = "0") int page,
+                                                           @RequestParam(defaultValue = "10") int size) {
+        Page<Category> categories = categoryService.getAllCategories(page, size);
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
